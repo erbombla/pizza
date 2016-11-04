@@ -1,20 +1,23 @@
-function Pizza(toppings, sizes) {
-  this.toppings = toppings;
-  this.sizes = size;
+function Pizza(topping, size) {
+  this.topping = topping;
+  this.size = size;
 }
 
-Pizza.prototype.calculate = function(){
-  return this.topping + this.sizes;
-}
+Pizza.prototype.cost = function(topping, size) {
+  var cost;
+  if
+   = this.topping + this.size;
+  return cost
+};
 
 $(function() {
-  $('form#order').submit(function(event)) {
+  $("form#order").submit(function(event)) {
     event.preventDefault();
-
-    var toppings = parseInt($('toppings').val());
-    var sizes = parseInt($('sizes').val());
-    var newPizza = new Pizza(toppings, sizes);
-
-    $('#reciept').append('<p>Total Cost: $' + newPizza.calculate() + '</p>');
+    $("#order").click(function(event)) {
+      var topping = parseInt($('topping').val());
+      var size = parseInt($('size').val());
+      var newPizza = new Pizza(topping, size);
+    }
+    $('#reciept').append('<p>Total: $' + newPizza.cost() + 'Thank you.</p>');
   });
 });
