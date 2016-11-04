@@ -11,8 +11,13 @@ h2 {
 img {
   width: 300px;
   height: auto;
+  border-radius: 5px; 
 }
 
 #pizzaOrder {
   display: none;
+}
+
+#box-shadow {
+  box-shadow: -5px -5px 5px rgba(145,148,163,0.71);
 }
