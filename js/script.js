@@ -5,12 +5,13 @@ function pizzaOrder(toppingAmount, size, quantity) {
 }
 
 pizzaOrder.prototype.cost = function(toppingAmount, size, quantity) {
+debugger; 
   var cost;
-  if ( size === "med" && toppingAmount === 0) {
+  if ( size === "medium" && toppingAmount === 0) {
     cost = 20 * quantity;
-  } else if ( size === "lg" && toppingAmount === 0) {
+  } else if ( size === "large" && toppingAmount === 0) {
     cost = 30 * quantity;
-  } else if ( size === "med" && toppingAmount > 0) {
+  } else if ( size === "medium" && toppingAmount > 0) {
     cost = (20 + toppingAmount) * quantity;
   } else {
     cost = (30 + toppingAmount) * quantity;
@@ -20,6 +21,7 @@ pizzaOrder.prototype.cost = function(toppingAmount, size, quantity) {
 
 $(function() {
   $("form#orderForm").submit(function(event) {
+
     event.preventDefault();
     var selectedSize = $("input[name=sizeRadios]:checked").val();
     var toppingChoice = [];
@@ -33,8 +35,8 @@ $(function() {
 
     $("#orderQuantity").text(newPizzaOrder.quantity);
     $("#orderSize").text(newPizzaOrder.size);
-    $("#pizzaTopping").text(toppingChoice);
-    $("#totalCost").text(newPizzaOrder.cost(selectedSize, toppingChoiceAmmount, selectedQuantity));
+    // $("#pizzaTopping").text(toppingChoice);
+    $("#totalCost").text(newPizzaOrder.cost(selectedSize, selectedQuantity));
     $("#pizzaOrder").show();
     return false;
   });
