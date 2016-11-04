@@ -3,7 +3,7 @@
   <head>
       <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
       <link href="css/style.css" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Cutive+Mono" rel="stylesheet">
       <script src="js/jquery-3.1.1.js"></script>
       <script src="js/script.js"></script>
       <title>One Pizza</title>
@@ -11,79 +11,87 @@
 
   <body>
       <div class="container">
-        <div class ="logo">
-          <img src="img/one-logo.png"/>
+        <div class="row">
+          <div class="col-lg-4">
+            <form id="orderForm" class="form-horizontal">
+              <div class="form-group" id="pizzaTopping">
+                <h2>Toppings</h2>
+                <hr>
+                  <h4>All pies include tomato sauce and fresh mozzarella. $1.00 for each topping</h4>
+                  <div class="checkbox">
+                    <label  class="check-box">
+                      <input type="checkbox" value="Pepperoni" name="toppingCheckbox">
+                      Pepperoni
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="Olives" name="toppingCheckbox">
+                      Black Olives
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="Mushrooms" name="toppingCheckbox">
+                      Mushrooms
+                    </label>
+                  </div>
+              </div>
+              <div class="form-group" id ="orderSize">
+                <h2>Size</h2>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" name="sizeRadios" class="form-check-input" id="medium" value="medium">
+                      14" $20.00
+                      </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" name="sizeRadios" class="form-check-input" id="large" value="large">
+                      18" $30.00
+                      </label>
+                  </div>
+              </div>
+              <div class="form-group" id=orderQuantity>
+                <h2>Quantity</h2>
+                  <label>
+                    <select name="orderQuantity" class="form-control">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+              </div>
+              <br>
+              <div class="form-group" style="text-align:center">
+                <button type ="submit" class="btn btn-danger btn-lg">Order</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <h2>About</h2>
+            <hr>
+              <p>
+                Vinyl neutra occupy, vape biodiesel asymmetrical health goth try-hard pop-up flexitarian. Ethical selfies unicorn sustainable. Literally taxidermy lyft, lomo bitters brooklyn jianbing quinoa vape listicle offal. Flannel seitan pour-over skateboard photo booth, try-hard heirloom cronut. Cold-pressed la croix paleo, church-key umami chambray disrupt green juice +1 farm-to-table trust fund lumbersexual. Single-origin coffee shoreditch pabst VHS copper mug banh mi. 90's seitan quinoa, hammock polaroid etsy vexillologist af kickstarter stumptown.
+              </p>
+                <img class = "center-block img-responsive" src="img/one-logo.png"/>
+            </div>
+          <div class="col-lg-4">
+            <h2>Your Order</h2>
+            <hr>
+            <div id="pizzaOrder">
+                <h4>Thank you for choosing ONE Pizza</h4>
+                <p><em>Your 'zaa is on the way!</em><p>
+                  <p>
+                    <span id="orderQuantity"></span>
+                    <span id="orderSize"></span>
+                    <span id="pizzaTopping"></span>
+                  </p>
+                  <h4>Total: $<span id="totalCost"></span></h4>
+              </div>
+          </div>
         </div>
-
-        <form id="orderForm">
-
-          <div class="form-group" id="pizzaTopping">
-            <h3>Toppings</h3>
-              <h4>All pies include tomato sauce and fresh mozzarella. $1.00 for each topping</h4>
-              <div class="checkbox">
-                <label  class="check-box">
-                  <input type="checkbox" value="Pepperoni" name="toppingCheckbox">
-                  Pepperoni
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="Olives" name="toppingCheckbox">
-                  Black Olives
-                </label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="Mushrooms" name="toppingCheckbox">
-                  Mushrooms
-                </label>
-              </div>
-          </div>
-
-          <div class="form-group" id ="orderSize">
-            <h3>Size</h3>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="radio" name="sizeRadios" class="form-check-input" id="medium" value="medium">
-                  14" $20.00
-                  </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="radio" name="sizeRadios" class="form-check-input" id="large" value="large">
-                  18" $30.00
-                  </label>
-              </div>
-          </div>
-
-          <div class="form-group" id=orderQuantity>
-            <h3>Quantity</h3>
-              <label>
-                <select name="orderQuantity" class="form-control">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-          </div>
-          <br>
-          <div class="form-group">
-            <button type ="submit" class="btn btn-default">Order</button>
-          </div>
-
-        </form>
-
-        <div id="pizzaOrder">
-          <h3>Reciept</h3>
-            <h4>Thank you for choosing ONE Pizza</h4>
-              <h5><em>Your 'zaa is on the way!</em><h5>
-            <p>
-              <span id="orderQuantity"></span> <span id="orderSize"></span> pizza with <span id="pizzaTopping"></span>
-            </p>
-            <h4>Total: $<span id="totalCost"></span></h4>
-        </div>
-      </div>
         <footer class="text-center">
           <hr>
           <p>2016 &#169;Eric Bomblatus  </a> / An Epiciodus Project </p>

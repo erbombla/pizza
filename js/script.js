@@ -1,4 +1,4 @@
-function pizzaOrder(topping, size, quantity, cost) {
+function pizzaOrder(topping, size, quantity) {
   this.topping = topping;
   this.size = size;
   this.quantity = quantity;
@@ -6,8 +6,9 @@ function pizzaOrder(topping, size, quantity, cost) {
 
 pizzaOrder.prototype.cost = function(topping, size, quantity) {
   debugger;
+  var topping = this.topping;
+  var size = this.size;
   var quantity = this.quantity;
-  var size = this.size; 
   if ( size === "medium" && topping === 0) {
     cost = 20 * quantity;
   } else if ( size === "large" && topping === 0) {
@@ -37,6 +38,6 @@ $(function() {
     $("#pizzaTopping").text(selectedTopping);
     $("#totalCost").text(newPizzaOrder.cost(newPizzaOrder));
     $("#pizzaOrder").show();
-    return false;
+    // return false;
   });
 });

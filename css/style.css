@@ -1,27 +1,18 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Slabo 27px', serif;
+  font-size: 18px;
+}
+
+h2 {
+  font-family: 'Cutive Mono', monospace;
+  text-align: center;
 }
 
 img {
-  width: 15%;
+  width: 300px;
+  height: auto;
 }
-
-/*.container {
-	border: 10px solid #ed4c4c;
-	padding: 10px;
-  padding-bottom: 300px;
-  margin: 0 auto;
-  text-align: center;
- }*/
 
 #pizzaOrder {
   display: none;
 }
-/*
-.top {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 75px;
-  margin-bottom: 75px;
-}*/
