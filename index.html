@@ -3,25 +3,23 @@
   <head>
       <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
       <link href="css/style.css" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Londrina+Shadow" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
       <script src="js/jquery-3.1.1.js"></script>
       <script src="js/script.js"></script>
       <title>One Pizza</title>
   </head>
 
   <body>
-    <div class="row">
-      <div class="col-lg-offset-3 col-lg-6 offset-lg-3" id="main-container">
-        <div class ="title">
-          <h1 class="text-center">ONE PIZZA</h1>
-          <h3 class="text-center"><em>The One and Only. One type of pizza.</em></h3>
+      <div class="container">
+        <div class ="logo">
+          <img src="img/one-logo.png"/>
         </div>
 
         <form id="orderForm">
 
-          <div class="form-group">
+          <div class="form-group" id="pizzaTopping">
             <h3>Toppings</h3>
-              <h4>All pies include sauce and fresh mozzarella. $1.00 for each topping</h4>
+              <h4>All pies include tomato sauce and fresh mozzarella. $1.00 for each topping</h4>
               <div class="checkbox">
                 <label  class="check-box">
                   <input type="checkbox" value="Pepperoni" name="toppingCheckbox">
@@ -42,7 +40,7 @@
               </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id ="orderSize">
             <h3>Size</h3>
               <div class="form-check">
                 <label class="form-check-label">
@@ -58,7 +56,7 @@
               </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" id=orderQuantity>
             <h3>Quantity</h3>
               <label>
                 <select name="orderQuantity" class="form-control">
@@ -70,7 +68,6 @@
                 </select>
           </div>
           <br>
-
           <div class="form-group">
             <button type ="submit" class="btn btn-default">Order</button>
           </div>
@@ -86,15 +83,10 @@
             </p>
             <h4>Total: $<span id="totalCost"></span></h4>
         </div>
-
-
       </div>
-    </div>
-
-    <footer class="text-center">
-      <hr>
-      <p>2016 &#169;Eric Bomblatus  </a> / An Epiciodus Project </p>
-    </footer>
-
+        <footer class="text-center">
+          <hr>
+          <p>2016 &#169;Eric Bomblatus  </a> / An Epiciodus Project </p>
+        </footer>
   </body>
 </html>
