@@ -3,7 +3,7 @@
   <head>
       <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
       <link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
       <script src="js/jquery-3.1.1.js"></script>
       <script src="js/script.js"></script>
       <title>One Pizza</title>
@@ -13,27 +13,28 @@
     <div class="container">
       <h1>ONE Pizza</h1>
       <hr>
-      <h3><em>The One and Only. One type of pizza. Get some 'zza!</em></h3>
+      <h3><em>The One and Only. One type of pizza.</em></h3>
       <div class="row">
         <div class="col-lg-6">
           <form id="orderForm">
             <h3>All pies include sauce and fresh mozzarella</h3>
             <h3>Toppings</h3>
+              <h4>$1.00 for each topping</h4>
               <div class="checkbox">
                 <label  class="check-box">
-                  <input type="checkbox" value="pepperoni">
+                  <input type="checkbox" value="pepperoni" name="toppingCheckbox">
                   Pepperoni
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="olive">
+                  <input type="checkbox" value="olive" name="toppingCheckbox">
                   Black Olives
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" value="mushroom">
+                  <input type="checkbox" value="mushroom" name="toppingCheckbox">
                   Mushrooms
                 </label>
               </div>
@@ -56,7 +57,7 @@
           </form>
         </div>
         <div class="col-lg-6" id="pizzaOrder">
-          <h3>**Reciept**</h3>
+          <h3>Reciept</h3>
             <h4>Thank you for choosing ONE Pizza</h4>
               <h5><em>Your 'zaa is on the way!</em><h5>
             <ul>
