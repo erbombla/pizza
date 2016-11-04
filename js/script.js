@@ -5,20 +5,18 @@ function pizzaOrder(topping, size, quantity) {
 }
 
 pizzaOrder.prototype.cost = function(topping, size, quantity) {
-  debugger;
-  var topping = this.topping;
-  var size = this.size;
-  var quantity = this.quantity;
-  if ( size === "medium" && topping === 0) {
-    cost = 20 * quantity;
-  } else if ( size === "large" && topping === 0) {
-    cost = 30 * quantity;
-  } else if ( size === "medium" && topping > 0) {
-    cost = (20 + topping) * quantity;
+  // debugger;
+  var price = 0.00
+  if ( size === "medium" && this.topping === 0) {
+    price = 20 * this.quantity;
+  } else if ( size === "large" && this.topping === 0) {
+    price = 30 * this.quantity;
+  } else if ( size === "medium" && this.topping > 0) {
+    price = (20 + this.topping) * this.quantity;
   } else {
-    cost = (30 + topping) * quantity;
+    price = (30 + this.topping) * this.quantity;
   }
-  return cost;
+  return price;
 }
 
 $(function() {

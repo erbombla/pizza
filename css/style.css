@@ -6,12 +6,13 @@ body {
 h2 {
   font-family: 'Cutive Mono', monospace;
   text-align: center;
+  color: #ed4c4c;
 }
 
 img {
   width: 300px;
   height: auto;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 #pizzaOrder {
