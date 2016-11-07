@@ -1,0 +1,11 @@
+Notes
+
+Eric,
+
+This application is very close to working. The main issue is that you are treating an array as an integer, which won't work. You can determine how many elements are in an array by looking at the .length property of an array. Also, don't forget that you can only return an instantiated object's property if you include "this" in the prototype. For example, this.size would work in your prototype but "size" by itself will not work.
+
+You also do not need to pass any arguments into this prototype since all the values that you need are already stored inside the instantiated object. In other words, your prototype can look like this: function() instead of this: function(topping, size, quantity)
+
+Make sure to get your week 2 and week 3 code reviews in as soon as possible. All 3 code reviews need to be submitted before Wednesday morning for reviewing.
+
+Franz
